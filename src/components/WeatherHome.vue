@@ -25,58 +25,27 @@
       :coords="coords"
       :alerts="alerts"
     />
-    <div v-if="forecastData.length">
-      <p class="text-2xl text-blue-400 font-sans pt-10">
-        A look ahead in {{ city }}
-      </p>
-      <div
-        class="grid grid-cols-1 lg:grid-cols-9 gap-3 max-w-5xl rounded shadow-lg relative mr-auto ml-auto mb-8 py-8 px-6"
-      >
-        <div
-          v-for="forecast in forecastBlocks"
-          :key="forecast.name"
-          class="w-28 ml-auto mr-auto text-center"
-        >
-          <p class="text-center text-xs font-bold pb-4 font-sans text-gray-600">
-            {{ forecast.name }}
-          </p>
-          <img
-            :src="forecast.icon"
-            :alt="forecast.shortForecast"
-            class="mx-auto rounded"
-          />
-          <p class="text-center text-xs pt-4 font-sans text-gray-600">
-            {{ forecast.shortForecast }}
-          </p>
-        </div>
-      </div>
-    </div>
-    <div
-      v-for="day in forecastData"
-      :key="day.startTime"
-      class="grid grid-cols-12 max-w-5xl ml-auto mr-auto px-3 py-3 even:bg-purple-50"
-    >
-      <div class="text-left col-span-2">
-        <p class="text-xl font-semibold font-sans">
-          {{ day.name }}
-        </p>
-      </div>
 
-      <div class="col-span-10 text-left ml-5">
-        <p class="text-gray-700 font-sans">
-          {{ day.detailedForecast }}
-        </p>
-      </div>
-    </div>
+    <forecast-blocks
+      v-if="forecastBlocks.length"
+      :forecastBlocks="forecastBlocks"
+      :city="city"
+    />
+
+    <forecast-table v-if="forecastData.length" :forecastData="forecastData" />
   </div>
 </template>
 
 <script>
 import CurrentConditions from "./CurrentConditions.vue";
+import ForecastBlocks from "./ForecastBlocks.vue";
+import ForecastTable from "./ForecastTable.vue";
 export default {
   name: "WeatherHome",
   components: {
     CurrentConditions,
+    ForecastBlocks,
+    ForecastTable,
   },
   data() {
     return {
