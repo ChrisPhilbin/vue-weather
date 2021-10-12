@@ -1,11 +1,13 @@
 <template>
   <div v-if="forecastBlocks.length">
-    <p class="text-2xl text-blue-400 font-sans pt-10">
-      A look ahead in {{ city }}
-    </p>
     <div
-      class="grid grid-cols-1 lg:grid-cols-9 gap-3 max-w-5xl rounded shadow-lg relative mr-auto ml-auto mb-8 py-8 px-6"
+      class="grid grid-cols-1 lg:grid-cols-9 gap-3 max-w-5xl rounded-md shadow-lg relative mr-auto ml-auto  my-8 py-8 px-6 bg-white"
     >
+      <div class="col-span-full">
+        <p class="text-2xl text-blue-400 font-sans">
+          A look ahead in {{ city }}
+        </p>
+      </div>
       <div
         v-for="forecast in forecastBlocks"
         :key="forecast.name"

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="grid grid-cols-1 lg:grid-cols-12 relative rounded shadow-lg max-w-5xl ml-auto mr-auto mt-8 pb-8"
+    class="grid grid-cols-1 lg:grid-cols-12 relative rounded-md shadow-lg max-w-5xl ml-auto mr-auto mt-8 pb-8 pt-4 bg-white"
   >
     <span
       class="absolute top-5 right-5 bg-red-500 p-2 rounded-md font-sans text-white font-bold text-xs"
@@ -31,13 +31,13 @@
         width="105"
         height="105"
       />
-      <p class="text-gray-500 font-bold font-sans text-xl">
+      <p class="text-gray-600 font-bold font-sans text-xl">
         {{ currentObservations.weather[0].main }}
       </p>
     </div>
     <div class="col-span-4 ml-3 lg:ml-0 text-left">
-      <p class="font-bold font-sans text-gray-400">
-        Current conditions in {{ city }}
+      <p class="font-bold font-sans tracking-tight text-gray-400 uppercase">
+        Currently in {{ city }}
       </p>
       <p class="text-gray-500 font-sans text-sm">
         {{ currentObservations.weather[0].description }}

@@ -1,7 +1,7 @@
 <template>
-  <div class="pb-10">
-    <p class="text-4xl text-blue-400 font-sans uppercase">
-      Welcome to the Vue Weather App
+  <div class="pb-10 pt-8">
+    <p class="text-4xl text-blue-400 font-inter-700 uppercase tracking-wide">
+      Fast Weather
     </p>
     <form @submit.prevent="getLatLonFromOpenWeather">
       <input

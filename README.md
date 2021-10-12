@@ -1,24 +1,7 @@
-# weather
+# Vue Weather App
 
-## Project setup
-```
-npm install
-```
+Vue app that leverages both the Open Weather API and the National Weather Service API. The Open Weather API is namely used to retreive the latitue and longitute based on a supplied zip code which is then fowarded to the National Weather Service API in order to obtain the forecast zone.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+Styling is handled by TailwindCSS.
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Live version: [https://vue-weather-4cac8.web.app/](https://vue-weather-4cac8.web.app/)

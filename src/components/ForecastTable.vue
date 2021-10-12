@@ -2,16 +2,16 @@
   <div
     v-for="day in forecastData"
     :key="day.startTime"
-    class="grid grid-cols-12 max-w-5xl ml-auto mr-auto px-3 py-3 even:bg-purple-50"
+    class="grid grid-cols-12 max-w-5xl ml-auto mr-auto px-3 py-3 even:bg-blue-100 rounded"
   >
-    <div class="text-left col-span-2">
-      <p class="text-xl font-semibold font-sans">
+    <div class="text-left col-span-3">
+      <p class="text-sm lg:text-xl text-gray-600 font-semibold font-sans">
         {{ day.name }}
       </p>
     </div>
 
-    <div class="col-span-10 text-left ml-5">
-      <p class="text-gray-700 font-sans">
+    <div class="col-span-9 text-left ml-5">
+      <p class="text-gray-600 font-sans">
         {{ day.detailedForecast }}
       </p>
     </div>
